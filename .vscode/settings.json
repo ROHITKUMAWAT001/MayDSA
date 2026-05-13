@@ -1,0 +1,9 @@
+{
+  "java.project.sourcePaths": [
+    "recursion",
+    "Strings/easy",
+    "Linked-List/Easy",
+    "Linked-List/Medium"
+  ],
+  "java.project.outputPath": "out"
+}

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class palindrome {
 
     public static boolean isPalindrome(String str) {
 
@@ -21,18 +21,15 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.print("Enter String: ");
+            String str = sc.nextLine();
 
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Enter String: ");
-        String str = sc.nextLine();
-
-        if (isPalindrome(str)) {
-            System.out.println("Palindrome String");
-        } else {
-            System.out.println("Not Palindrome String");
+            if (isPalindrome(str)) {
+                System.out.println("Palindrome String");
+            } else {
+                System.out.println("Not Palindrome String");
+            }
         }
-
-        sc.close();
     }
 }

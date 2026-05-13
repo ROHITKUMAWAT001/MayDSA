@@ -1,15 +1,22 @@
-//class solution{
-//    public static int strStr(String h, String n){
-//        int m = h.length();
-//        int o = n.length();
-//
-//        for(int i=0;i<=m-o;i++){
-//            int j=0;
-//            while(j < o && h.charAt(i+j) == n.charAt(i) ){
-//                j++;
-//            }
-//
-//        }
-//    }
-//
-//}
+public class leetcode28 {
+	public static int strStr(String haystack, String needle) {
+		if (needle.isEmpty()) {
+			return 0;
+		}
+
+		int m = haystack.length();
+		int n = needle.length();
+
+		for (int i = 0; i <= m - n; i++) {
+			int j = 0;
+			while (j < n && haystack.charAt(i + j) == needle.charAt(j)) {
+				j++;
+			}
+			if (j == n) {
+				return i;
+			}
+		}
+
+		return -1;
+	}
+}

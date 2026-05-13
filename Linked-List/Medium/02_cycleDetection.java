@@ -1,5 +1,5 @@
-class solution{
-     static class Node {
+class CycleDetection {
+    static class Node {
         int data;
         Node next;
 
@@ -7,16 +7,23 @@ class solution{
             this.data = data;
         }
     }
-     boolean isCycle(Node head){
-               if(head ==null || head.next == null)return false;
-               Node slow = head;
-               Node fast = head.next;
 
-               while(fast!=slow){
-                      slow = slow.next;
-                      fast = fast.next.next;  
-               }
-     
+    boolean isCycle(Node head) {
+        if (head == null || head.next == null) {
+            return false;
+        }
+
+        Node slow = head;
+        Node fast = head;
+
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            if (slow == fast) {
+                return true;
+            }
+        }
+
         return false;
     }
 }

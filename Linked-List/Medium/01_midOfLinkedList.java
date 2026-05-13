@@ -10,10 +10,13 @@ class MidOfLinkedList {
     }
 
     public static Node findMiddle(Node head) {
+        if (head == null) {
+            return null;
+        }
 
         Node slow = head;
-        Node fast = head.next;
-       while( fast.next != null && fast.next.next !=null){
+        Node fast = head;
+       while (fast.next != null && fast.next.next != null) {
         fast = fast.next.next;
         slow = slow.next;
        }
